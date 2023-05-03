@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_bottom"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_top"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_left"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_right"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/desc_top"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/desc_bottom"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back_right"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cast_left"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/spell_picture_big"
+        app:layout_constraintTop_toTopOf="@id/view_top"
+        app:layout_constraintBottom_toBottomOf="@id/title_bottom"
+        app:layout_constraintStart_toStartOf="@id/view_left"
+        app:layout_constraintDimensionRatio="1:1"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/spell_title"
+        app:layout_constraintTop_toTopOf="@id/view_top"
+        app:layout_constraintBottom_toBottomOf="@id/title_bottom"
+        app:layout_constraintStart_toEndOf="@id/spell_picture_big"
+        app:layout_constraintEnd_toEndOf="@id/view_right"
+        android:textSize="34sp"
+        android:background="@drawable/btn_background"
+        android:padding="6dp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/spell_desc"
+        app:layout_constraintTop_toTopOf="@id/desc_top"
+        app:layout_constraintBottom_toBottomOf="@id/desc_bottom"
+        app:layout_constraintStart_toStartOf="@id/view_left"
+        app:layout_constraintEnd_toEndOf="@id/view_right"
+        android:textAlignment="center"
+        android:scrollbars = "vertical"
+        android:textSize="26sp"
+        android:padding="6dp"
+        android:background="@drawable/btn_background"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Назад"
+        android:textSize="26sp"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:id="@+id/text_back"
+        android:background="@drawable/btn_background"
+        app:layout_constraintStart_toStartOf="@id/view_left"
+        app:layout_constraintEnd_toEndOf="@id/back_right"
+        app:layout_constraintTop_toTopOf="@id/desc_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Каст"
+        android:textSize="34sp"
+        android:textAlignment="center"
+        android:id="@+id/text_cast"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="20dp"
+        android:background="@drawable/btn_background"
+        app:layout_constraintStart_toStartOf="@id/cast_left"
+        app:layout_constraintEnd_toEndOf="@id/view_right"
+        app:layout_constraintTop_toTopOf="@id/desc_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

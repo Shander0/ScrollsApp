@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".ui.MainActivity">
+    
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/left_border"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/right_border"
+        app:layout_constraintGuide_percent="0.95"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/top_border"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/bottom_border"
+        app:layout_constraintGuide_percent="0.98"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/recycler_bottom"
+        app:layout_constraintGuide_percent="0.88"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/mana_right"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/fragment"
+        app:layout_constraintTop_toTopOf="@id/top_border"
+        app:layout_constraintBottom_toBottomOf="@id/recycler_bottom"
+        app:layout_constraintStart_toStartOf="@id/left_border"
+        app:layout_constraintEnd_toEndOf="@id/right_border"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        app:layout_constraintTop_toTopOf="@id/recycler_bottom"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_border"
+        app:layout_constraintStart_toStartOf="@id/left_border"
+        app:layout_constraintEnd_toEndOf="@id/mana_right"
+        android:background="@drawable/item_back"
+        android:padding="6dp"
+        android:layout_margin="4dp"
+        android:id="@+id/mana_text"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/recycler_bottom"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_border"
+        app:layout_constraintEnd_toEndOf="@id/mana_right"
+        android:src="@drawable/mana"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginVertical="10dp"
+        android:textSize="38sp"
+        android:padding="6dp"
+        android:text="Код"
+        android:background="@drawable/btn_background"
+        app:layout_constraintTop_toTopOf="@id/recycler_bottom"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_border"
+        app:layout_constraintStart_toStartOf="@id/mana_right"
+        app:layout_constraintEnd_toEndOf="@id/right_border"
+        android:id="@+id/btn_qr"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginVertical="10dp"
+        android:textSize="36sp"
+        android:text="Назад"
+        android:padding="6dp"
+        android:background="@drawable/btn_background"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/recycler_bottom"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_border"
+        app:layout_constraintStart_toStartOf="@id/mana_right"
+        app:layout_constraintEnd_toEndOf="@id/right_border"
+        android:id="@+id/btn_qr_back"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
